@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background-color: tomato;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    EVENTOS DOM:  
+    onclick="": quando clickar
+    onmouseenter="": quando o mouse entrar
+    onmouseout="": quando o mouse sair
+    -->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+
+        <p>interaja...</p>
+       
+    </div>
+
+
+    <script>
+
+        var a = document.getElementById('area')
+
+        // OUVIDORES DOM:
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout',sair)
+
+
+        // FUNÇÕES JAVASCRIPT:
+        function clicar() {
+            var a = document.getElementById('area')
+            a.innerText = 'Clicou!'
+            a.style.background = "black"
+        }
+
+        function entrar() {  
+            a.innerText = 'Entrou!'
+            a.style.background = "tomato"
+        }
+        
+        function sair() {  
+            a.innerText = 'Saiu!'
+            a.style.background = "blue"
+        }
+
+    </script>
+
+</body>
+</html>
