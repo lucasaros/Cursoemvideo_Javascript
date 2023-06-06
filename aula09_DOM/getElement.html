@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="titulo">Titulo de teste</h1>
+    <ul class="lista">
+        <li class="lista-item">Item 1</li>
+        <li class="lista-item">Item 1</li>
+        <li class="lista-item">Item 1</li>
+        <li class="lista-item">Item 1</li>
+        <li class="lista-item">Item 1</li>
+        <li class="lista-item">Item 1</li>
+        <li class="lista-item">Item 1</li>
+    </ul>
+
+    <input type="button" value="Click" onclick="funcao()">
+
+    <script>
+        // function funcao() {
+        //     const lista = document.querySelectorAll('.lista-item');
+
+        //     lista[0].style.background = 'gray'
+        // } 
+
+        function funcao() {
+            const lista = document.querySelectorAll('.lista-item');
+
+            lista.forEach(elemento => {
+            elemento.style.background = 'gray'; 
+            // Altera o fundo de cada elemento da lista para cinza
+            })
+        }
+
+    </script>
+</body>
+</html>
